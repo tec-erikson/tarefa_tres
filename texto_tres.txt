@@ -1,1 +1,1 @@
-Esse é o conteúdo do texto 3
+Esse é o conteúdo do texto 3, modificação com base no item 6 da tarefa
