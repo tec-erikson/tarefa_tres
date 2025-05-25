@@ -1,0 +1,100 @@
+Erikson Pedro da Silva Nicacio
+
+1 - Inicialmente implementou-se o seguinte comando: 
+   pwd (comando utilizado para visualizar a pasta onde será criado o diretório); 
+
+2 - Em seguida, para criar o diretório, foi utilizado o comando: 
+   mkdir curso-git-6 (comando utilizado para criar o diretório);
+
+3 - Para acessar o diretório, foi utilizado o comando cd curso-git-6
+
+4 - Após isso, foi inicializado o repositório git dentro desse diretório através do comando: git init.
+
+5 - O próximo passo foi a vinculação do repositório ao nome e e-mail, através dos comandos: git config user.name       
+    "Erikson Pedro" e git config user.email "tecnologoeriksonpedro@gmail.com".
+
+6 - Em seguida, conforme o item 2 da tarefa, foram criados um arquivo de texto, realizando em seguida o processo de commit
+   por meio dos seguintes comandos, nessa ordem:  
+   - git add texto_um.txt;
+   - git add texto_dois.txt;
+   - git add texto_tres.txt;
+   - git commit -m "primeiro_commit"
+
+7 - Em seguida, foram realizadas modificações nos arquivos texto um e texto dois, sendo realizado um novo commit por meio    
+   dos seguintes comandos:
+   - git add texto_um.txt;
+   - git add texto_dois.txt;
+   - git commit -m "segundo_commit"
+
+8 - Após isso, foi realizado o acesso ao histórico do repositório por meio dos seguintes comandos:
+   - git log;
+   - git log --oneline;
+   - git log --graph;
+   - git log --decorate;
+   - git log --all.
+
+9 - Após isso, o ultimo commit foi revertido sem prejuízo de perca de informações no repositório, por meio do seguintes    
+   comandos:
+   - git log --oneline (comando usado para pegar a identificação do ultimo commit);
+   - git revert 8ce9180 (8ce9180 é código do commit que será revertido).
+
+10 - Seguindo o roteiro, foi realizada uma modificação no texto_três.txt, sendo o arquivo posteriormente salvo. Em    
+    seguida, armazenou-se o arquivo temporariamente por meio do seguinte comando:
+   - git stash.
+
+11 - Após isso, foi criada uma nova branch por meio do seguinte comando: 
+    - git checkout -b branch-nova.
+
+12 - já na nova branch, foram retomadas as modificações no texto_três.txt po meio do seguinte comando:
+    - git stash pop.
+
+13 - Em seguida, foram listados os registros recentes de movimentação do repositório, mesmo aqueles que não estão visíveis    
+    no histórico tradicional, por meio do seguinte comando:
+    - git reflog.
+
+14 - Em seguida, o commit inicial do projeto foi marcado como uma versão estável por meio do seguinte comando:
+    - git tag -a v1.1 7da9a59 -m "versão estável" (onde 7da9a59 é a identificação do primeiro commit).
+
+15 - Após isso, após criar um repositório remoto público no GitHub, foi imserido, ao repositório local, o 
+     repositório remoto, através do seguinte comando:
+    - git remote add origin https://github.com/tec-erikson/tarefa_tres.git
+
+16 - Após isso, o presente arquivo foi adicionado e comitado, sendo tudo enviado para o repositório remoto público por 
+     meio dos seguintes comandos:
+     - git add comandos.txt;
+     - git commit -m "ultimo_commit"
+     - git push -u origin master;
+     - git push -u origin branch-nova;
+     - git push -u origin v1.1
+
+
+
+
+
+
+
+
+10 - Após isso, tentou realizar o marge da branch feature-1 na main por meio do seguinte comando:
+   git merge feature-1
+   (OBS: tal operação resultou em um conflito, resolvido por meio das orientações da aula)
+
+11 - Após fazer as devidas correções manuais, foi realizado um novo commit na branch main por meio dos reguintes comandos:
+   -git add texto.txt
+   -git commit -m "terceiro commit referente ao item 8 da tarefa"
+
+12 - Em seguida, foi criada a branch add-comandos por meio do seguinte comando: 
+   -git checkout -b add-comandos
+
+13 - Após isso, o presente arquivo foi adicionado à nova branch, sendo realizado um novo commit por meios dos seguintes comandos:
+   -git add comandos.txt
+   -git commit -m "quinto commit referente ao item 10 da tarefa"
+
+14 - Em seguida, foi criado um repositório remoto no github e configure-o no seu git local como origin-atividade, por meio do seguinte comando:
+   git remote add origin-atividade https://github.com/tec-erikson/curso-git-ead-ifrn-2.git
+
+15 - Por fim, "subiu-se" para o repositório remoto tanto a branch main quanto a branch add-comandos por meio dos seguintes comandos, respectivamente:
+   -git checkout main;
+   -git commit -m "ultimo_commit"
+   -git push -u origin-atividade main;
+   -git checkout add-comandos;
+   -git push -u origin-atividade add-comandos.
